@@ -1,0 +1,57 @@
+.container-1,
+.container-3 {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.flex-box-container-1 {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-box-container-1 div {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+}
+.flex-box-container-2 {
+  display: flex;
+  border: 1px solid blue;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-box-container-2 button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.flex-box-rps-select,
+.flex-box-rps-result {
+  display: flex;
+  align-items: center;
+  border: 1px solid blue;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.flex-box-rpsgame img:hover {
+  box-shadow: 0px 2px 5px blue;
+}
