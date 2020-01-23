@@ -76,7 +76,7 @@ function rpsFrontEnd(buddychoice, botchoice, finalMessage) {
     paper: document.getElementById("paper").src,
     scissor: document.getElementById("scissor").src
   };
-  document.getElementById("flex-box-rps-select").remove();
+  document.getElementById("flex-box-rps-select").style.display = "none";
 
   //   document.getElementById("rock").remove();
   //   document.getElementById("paper").remove();
@@ -84,15 +84,12 @@ function rpsFrontEnd(buddychoice, botchoice, finalMessage) {
 
   var resultdiv = document.createElement("div");
   resultdiv.id = "flex-box-rps-result";
-  //   resultdiv.style="{
-  //     display: flex,
-  //     align-items: center,
-  //     border: 1px solid blue,
-  //     padding: 10px,
-  //     flex-wrap: wrap,
-  //     flex-direction: row,
-  //     justify-content: space-around
-  //   }";
+  resultdiv.style.display = "flex";
+  resultdiv.style.alignItems = "center";
+  resultdiv.style.border = "1px solid blue";
+  resultdiv.style.padding = "10px";
+  resultdiv.style.flexWrap = "wrap";
+  resultdiv.style.justifyContent = "space-around";
   var humandiv = document.createElement("div");
   var messagediv = document.createElement("div");
   var botdiv = document.createElement("div");
@@ -117,18 +114,18 @@ function rpsFrontEnd(buddychoice, botchoice, finalMessage) {
 
   var playagainbtn = document.createElement("button");
   playagainbtn.innerHTML = "Play Again";
-  playagainbtn.onClick = playagain(resultdiv.id, "flex-box-rps-select");
-  //button.
+
+  //   //button.
   document.getElementById("container-3").appendChild(resultdiv);
   document.getElementById("flex-box-rps-result").appendChild(humandiv);
   document.getElementById("flex-box-rps-result").appendChild(messagediv);
   document.getElementById("flex-box-rps-result").appendChild(botdiv);
   document.getElementById("flex-box-rps-result").appendChild(playagainbtn);
-}
-function playagain(resultdivid, selectdivid) {
-  document.getElementById("" + resultdivid + "").remove();
-  document
-    .getElementById("container-3")
-    .appendChild(document.getElementById(selectdivid));
+  playagainbtn.onClick = pa;
+  var pa = function() {
+    console.log("in pa function");
+    document.getElementById("flex-box-rps-result").style.display = "none";
+    document.getElementById("flex-box-rps-select").style.display = "block";
+  };
 }
 //RPSGame end
